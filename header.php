@@ -33,20 +33,19 @@
 	<header>
 		<div class="navbar navbar-fixed-top navbar-inverse">
 			<div class="container">
-			  	<div class="navbar-header">
-				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-				    	<span class="icon-bar"></span>
-				      	<span class="icon-bar"></span>
-				      	<span class="icon-bar"></span>
-				    </button>
-				    <a class="navbar-brand" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
-				</div>
 				<div class="navbar-collapse collapse navbar-responsive-collapse">
 				    <ul class="nav navbar-nav">
-				    	<?php $this->widget('Widget_Metas_Category_List')
-				            ->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
-				      	<?php $this->widget('Widget_Contents_Page_List')
-				      		->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
+				    	<li<?php if($this->is('index')): ?> class="active"<?php endif; ?>><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></li>
+
+				    	<?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
+				      	<?php while($category->next()): ?>
+							<li<?php if ($this->is('category', $category->slug)): ?> class="active"<?php endif; ?>><a href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>"><?php $category->name(); ?></a></li>
+				      	<?php endwhile; ?>
+
+				        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+				      	<?php while($pages->next()): ?>
+							<li<?php if($this->is('page', $pages->slug)): ?> class="active"<?php endif; ?>><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
+				      	<?php endwhile; ?>
 				    </ul>
 				    <ul class="nav navbar-nav navbar-right">
 				    	<?php if($this->user->hasLogin()): ?>

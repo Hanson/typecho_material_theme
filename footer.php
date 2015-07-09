@@ -17,6 +17,7 @@
 	</footer>
 
 	<script src="<?php $this->options->themeUrl('js/jquery-2.1.4.min.js'); ?>"></script>
+	<script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>"></script>
 	<script>
