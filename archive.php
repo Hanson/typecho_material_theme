@@ -13,7 +13,7 @@
                 <?php while($this->next()): ?>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h3 class="post-title"><a href="<?php $this->permalink() ?>" target="_blank"><?php $this->title() ?></a></h3>
+                        <h3 class="post-title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h3>
                         <div class="post-meta">
                             <span>作者：<a href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a> | </span>
                             <span>时间：<?php $this->date('F j, Y'); ?> | </span>
