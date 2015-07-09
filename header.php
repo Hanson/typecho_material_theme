@@ -16,17 +16,9 @@
         <link rel="Bootmark" href="<?php $this->options->siteIcon() ?>" />
         <?php endif; ?>
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/bootstrap.min.css'); ?>">
-        <link rel="stylesheet" href="<?php $this->options->themeUrl('css/material-fullpalette.min.css'); ?>">
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/material.min.css'); ?>">
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/ripples.min.css'); ?>">
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/roboto.min.css'); ?>">
-        <!--
-        <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-        <link href="//cdn.bootcss.com/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css" rel="stylesheet">
-        <link href="//cdn.bootcss.com/bootstrap-material-design/0.3.0/css/material.min.css" rel="stylesheet">
-        <link href="//cdn.bootcss.com/bootstrap-material-design/0.3.0/css/ripples.min.css" rel="stylesheet">
-        <link href="//cdn.bootcss.com/bootstrap-material-design/0.3.0/css/roboto.min.css" rel="stylesheet">
-        -->
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/customs.css'); ?>">
 	</head>
 
