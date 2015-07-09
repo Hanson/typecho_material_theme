@@ -1,16 +1,14 @@
 <?php $this->comments()->to($comments); ?>
 <div class="row">
     <div id="comments">
-        <div class="alert alert-info">
-            <span id="commentCount"><?php $this->commentsNum(_t('还不快抢沙发'), _t('只有地板了'), _t('已有 %d 条评论')); ?></span>
-        </div>
-        <?php $comments->listComments(); ?>
-        <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
-    </div>
-</div>
+
 
 <?php if($this->allow('comment')): ?>
-
+<div class="alert alert-info">
+    <span id="commentCount"><?php $this->commentsNum(_t('还不快抢沙发'), _t('只有地板了'), _t('已有 %d 条评论')); ?></span>
+</div>
+<?php $comments->listComments(); ?>
+<?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
 <div class="respond panel panel-default">
 	<div class="panel-body">
 		<div class="cancel-comment-reply"></div>
@@ -75,8 +73,10 @@
 
 <?php else: ?>
 
-<div class="block">
-    <p class="ui ribbon label <?php $this->options->labelColor() ?>"><?php _e('楼主残忍的关闭了评论'); ?></p>
-</div>
+	<div class="alert alert-info">
+	    <span id="commentCount">评论已关闭</span>
+	</div>
 
 <?php endif; ?>
+</div>
+</div>
