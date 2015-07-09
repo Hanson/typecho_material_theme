@@ -73,7 +73,7 @@
 
 <?php else: ?>
 
-	<div class="alert alert-info">
+	<div class="alert alert-warning">
 	    <span id="commentCount">评论已关闭</span>
 	</div>
 
