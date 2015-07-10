@@ -3,6 +3,8 @@
 	<script src="//cdn.bootcss.com/bootstrap-material-design/0.3.0/js/material.min.js"></script>
 	<script src="//cdn.bootcss.com/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
 	-->
+	</div>
+	</div>
 	<footer>
 		<div class="footer-bottom">
 			<div class="container">
