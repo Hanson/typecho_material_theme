@@ -32,7 +32,7 @@
 	    </a>
 	    <div class="comments_box">
 			<?php while($comments->next()): ?>
-			    <a href="<?php $comments->permalink(); ?>" class="item"><?php $comments->author(false); ?>: <?php $comments->excerpt(10, '...'); ?></a>
+			    <a href="<?php $comments->permalink(); ?>" class="item"><?php $comments->author(false); ?>: <?php $comments->excerpt(30, '...'); ?></a>
 			<?php endwhile; ?>
 	    </div>
 	</div>
