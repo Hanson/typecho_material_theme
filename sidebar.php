@@ -39,7 +39,7 @@
 	<?php endif; ?>
 
 	<?php if (!empty($this->options->sidebarBlock) && in_array('ShowTags', $this->options->sidebarBlock)): ?>
-	<?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=30')->to($tags); ?>
+	<?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=count&ignoreZeroCount=1&desc=1&limit=5')->to($tags); ?>
 	<div class="panel panel-info">
 	    <a class="panel-heading" onclick="$('.tags_box').slideToggle()" href="javascript:;">
 	        <h3 class="panel-title">标签</h3>
