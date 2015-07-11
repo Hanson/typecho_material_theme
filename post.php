@@ -1,12 +1,4 @@
-<?php
-
-    if (isset($_GET["action"]) && $_GET["action"] == "ajax_comments") {
-        $this->need('comments.php');
-    } else {
-        if(strpos($_SERVER["PHP_SELF"],"themes")) header('Location:/');
-        $this->need('header.php');
-
-?>
+<?php $this->need('header.php'); ?>
 
 <div class="container" id="main">
     <div class="row">
