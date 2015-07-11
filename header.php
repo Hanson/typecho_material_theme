@@ -15,6 +15,7 @@
         <link rel="Shortcut Icon" href="<?php $this->options->siteIcon() ?>" />
         <link rel="Bootmark" href="<?php $this->options->siteIcon() ?>" />
         <?php endif; ?>
+        <?php $this->header(); ?>
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/bootstrap.min.css'); ?>">
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/material.min.css'); ?>">
         <link rel="stylesheet" href="<?php $this->options->themeUrl('css/ripples.min.css'); ?>">
