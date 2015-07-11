@@ -9,6 +9,7 @@
 </div>
 <?php $comments->listComments(); ?>
 <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
+<div id="<?php $this->respondId(); ?>" class="respond">
 <div class="respond panel panel-default">
 	<div class="panel-body">
 		<div class="cancel-comment-reply"></div>
@@ -70,7 +71,7 @@
 		    </form>
 	</div>
 </div>
-
+</div>
 <?php else: ?>
 
 	<div class="alert alert-warning">
