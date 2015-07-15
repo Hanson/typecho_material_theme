@@ -8,11 +8,18 @@
 	<footer>
 		<div class="footer-bottom">
 			<div class="container">
-				<div class="pull-left copyright">Copyright © 2015&nbsp;<?php $this->options->title(); ?></div>
+				<div class="pull-left copyright">Copyright &copy; 2015&nbsp;<?php $this->options->title(); ?></div>
 				<ul class="footer-nav pull-right">
 					<li>Powered by <a href="http://typecho.org/" rel="nofollow">Typecho)))</a></li>
 					<li>Optimized by <a href="http://hanc.cc">HanSon</a></li>
-					<li><a href="http://www.miibeian.gov.cn" rel="nofollow">粤ICP备14072384号-2</a></li>
+
+					<?php if($this->options->miibeian) : ?>
+					<li><a href="http://www.miibeian.gov.cn" rel="nofollow"><?php echo $this->options->miibeian; ?></a></li>
+					<?php endif; ?>
+
+					<?php if ( !empty($this->options->misc) && in_array('ShowLoadTime', $this->options->misc) ) : ?>
+					<li>加载耗时：<?php echo timer_stop(), ' s'; ?></li>
+					<?php endif; ?>
 				</ul>
 			</div>
 		</div>

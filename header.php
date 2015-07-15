@@ -40,6 +40,7 @@
 							<li<?php if($this->is('page', $pages->slug)): ?> class="active"<?php endif; ?>><a href="<?php $pages->permalink(); ?>" title="<?php $pages->title(); ?>"><?php $pages->title(); ?></a></li>
 				      	<?php endwhile; ?>
 				    </ul>
+                    <?php if ( !empty($this->options->misc) && in_array('ShowLogin', $this->options->misc) ) : ?>
 				    <ul class="nav navbar-nav navbar-right">
 				    	<?php if($this->user->hasLogin()): ?>
 				    		<li><a href="<?php $this->options->adminUrl(); ?>"><?php $this->user->screenName(); ?></a></li>
@@ -48,6 +49,7 @@
 				      		<li><a href="<?php $this->options->adminUrl('login.php'); ?>">登录</a></li>
 				      	<?php endif; ?>
 				    </ul>
+                    <?php endif; ?>
 			  	</div>
 			</div>
 		</div>
