@@ -26,6 +26,15 @@
 	<header>
 		<div class="navbar navbar-fixed-top navbar-inverse">
 			<div class="container">
+                <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
+                </div>
 				<div class="navbar-collapse collapse navbar-responsive-collapse">
 				    <ul class="nav navbar-nav">
 				    	<li<?php if($this->is('index')): ?> class="active"<?php endif; ?>><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></li>
