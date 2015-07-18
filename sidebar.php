@@ -67,4 +67,17 @@
 	    </div>
 	</div>
 	<?php endif; ?>
+ 
+    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowOther', $this->options->sidebarBlock)): ?>
+	<div class="panel panel-info">
+	    <a class="panel-heading" onclick="$('.other_box').slideToggle()" href="javascript:;">
+	        <h3 class="panel-title">其他</h3>
+	    </a>
+	    <div class="other_box">
+	       <a href="<?php $this->options->feedUrl(); ?>" class="item"><?php _e('文章 RSS'); ?></a>
+	       <a href="<?php $this->options->commentsFeedUrl(); ?>" class="item"><?php _e('评论 RSS'); ?></a>
+	    </div>
+	</div>
+
+    <?php endif; ?>
 </div>
