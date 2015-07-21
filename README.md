@@ -1,6 +1,7 @@
 # typecho-material-theme
 material style theme for the typecho
 
+#（此版本有bug，正在修复，请勿下载）
 #feature
 _分类显示在导航栏_
 
