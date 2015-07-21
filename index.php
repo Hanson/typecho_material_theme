@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 这是HanSon 基于material
+ * 这是HanSon 基于material 的Typecho模板
  *
  * @package Material Theme
  * @author HanSon
