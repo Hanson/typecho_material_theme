@@ -37,7 +37,7 @@
                 </div>
 				<div class="navbar-collapse collapse navbar-responsive-collapse">
 				    <ul class="nav navbar-nav">
-				    	<li<?php if($this->is('index')): ?> class="active"<?php endif; ?>><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a></li>
+				    	<li<?php if($this->is('index')): ?> class="active"<?php endif; ?>><a href="<?php $this->options->siteUrl(); ?>"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> <?php $this->options->title() ?></a></li>
 
 				    	<?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
 				      	<?php while($category->next()): ?>
