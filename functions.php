@@ -10,16 +10,6 @@ function themeConfig($form) {
     $miibeian = new Typecho_Widget_Helper_Form_Element_Text('miibeian', NULL, _t('粤ICP备14072384号-2'), _t('备案号'), _t('在这里填入天朝备案号，不显示则留空'));
     $form->addInput($miibeian);
 
-    $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', array(
-        'ShowSearch' => _t('显示搜索框'),
-        'ShowRecentPosts' => _t('显示最新文章'),
-        'ShowRecentComments' => _t('显示最近回复'),
-        'ShowTags' => _t('显示标签'),
-        'ShowArchive' => _t('显示归档'),
-        'ShowOther' => _t('显示其它杂项')),
-    array('ShowRecentPosts', 'ShowRecentComments', 'ShowFriend', 'ShowOther'), _t('侧边栏显示'));
-    $form->addInput($sidebarBlock->multiMode());
-
     $misc = new Typecho_Widget_Helper_Form_Element_Checkbox('misc', array(
         'ShowLogin' => _t('前台显示登录入口'),
         'ShowLoadTime' => _t('页脚显示加载耗时')
