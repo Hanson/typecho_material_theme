@@ -1,5 +1,4 @@
 <div class="col-md-3">
-	<?php if (!empty($this->options->sidebarBlock) && in_array('ShowSearch', $this->options->sidebarBlock)): ?>
 	<form method="post" action="" class="panel-body">
 		<div class="input-group">
 			<div class="form-control-wrapper">
@@ -10,9 +9,7 @@
 			</span>
 		</div>
 	</form>
-	<?php endif; ?>
 
-	<?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentPosts', $this->options->sidebarBlock)): ?>
 	<div class="panel panel-info">
 	    <a class="panel-heading" onclick="$('.recent_posts_box').slideToggle()" href="javascript:;">
 	        <h3 class="panel-title">最新文章</h3>
@@ -22,9 +19,7 @@
 	        ->parse('<a href="{permalink}" class="item">{title}</a>'); ?>
 	    </div>
 	</div>
-	<?php endif; ?>
 
-	<?php if (!empty($this->options->sidebarBlock) && in_array('ShowRecentComments', $this->options->sidebarBlock)): ?>
 	<?php $this->widget('Widget_Comments_Recent')->to($comments); ?>
 	<div class="panel panel-info">
 	    <a class="panel-heading" onclick="$('.comments_box').slideToggle()" href="javascript:;">
@@ -36,9 +31,7 @@
 			<?php endwhile; ?>
 	    </div>
 	</div>
-	<?php endif; ?>
 
-	<?php if (!empty($this->options->sidebarBlock) && in_array('ShowTags', $this->options->sidebarBlock)): ?>
 	<?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=count&ignoreZeroCount=1&desc=1&limit=5')->to($tags); ?>
 	<div class="panel panel-info">
 	    <a class="panel-heading" onclick="$('.tags_box').slideToggle()" href="javascript:;">
@@ -54,9 +47,7 @@
 			<?php endif; ?>
 		</div>
 	</div>
-	<?php endif; ?>
 
-	<?php if (!empty($this->options->sidebarBlock) && in_array('ShowArchive', $this->options->sidebarBlock)): ?>
 	<div class="panel panel-info">
 	    <a class="panel-heading" onclick="$('.article_cate_box').slideToggle()" href="javascript:;">
 	        <h3 class="panel-title">归档</h3>
@@ -66,9 +57,7 @@
 	        ->parse('<a href="{permalink}" class="item">{date}</a>'); ?>
 	    </div>
 	</div>
-	<?php endif; ?>
  
-    <?php if (!empty($this->options->sidebarBlock) && in_array('ShowOther', $this->options->sidebarBlock)): ?>
 	<div class="panel panel-info">
 	    <a class="panel-heading" onclick="$('.other_box').slideToggle()" href="javascript:;">
 	        <h3 class="panel-title">其他</h3>
@@ -79,5 +68,4 @@
 	    </div>
 	</div>
 
-    <?php endif; ?>
 </div>
