@@ -1,7 +1,7 @@
 # typecho-material-theme
 material style theme for the typecho
 
-#注意：下载后需要更改文件夹名称，不然会报500错误（感谢Sunappnio提供解决方案）
+_注意：下载后需要更改文件夹名称，不然会报500错误（感谢Sunappnio提供解决方案）_
 
 #feature
 
