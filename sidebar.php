@@ -37,13 +37,13 @@
 	    <a class="panel-heading" onclick="$('.tags_box').slideToggle()" href="javascript:;">
 	        <h3 class="panel-title">标签</h3>
 	    </a>
-		<?php if($tags->have()): ?>
 		<div class="tags_box">
-			<?php while ($tags->next()): ?>
-			    <a href="<?php $tags->permalink(); ?>" rel="tag" class="item size-<?php $tags->split(5, 10, 20, 30); ?>" title="<?php $tags->count(); ?> 个话题"><?php $tags->name(); ?><span class="badge pull-right"> <?php $tags->count(); ?></span></a>
-			<?php endwhile; ?>
+			<?php if($tags->have()): ?>
+				<?php while ($tags->next()): ?>
+				    <a href="<?php $tags->permalink(); ?>" rel="tag" class="item size-<?php $tags->split(5, 10, 20, 30); ?>" title="<?php $tags->count(); ?> 个话题"><?php $tags->name(); ?><span class="badge pull-right"> <?php $tags->count(); ?></span></a>
+				<?php endwhile; ?>
 			<?php else: ?>
-			    <a class="item"><?php _e('没有任何标签'); ?></a>
+				<a class="item"><?php _e('没有任何标签'); ?></a>
 			<?php endif; ?>
 		</div>
 	</div>
