@@ -1,6 +1,13 @@
 # typecho-material-theme
 material style theme for the typecho
 
+# version
+
+2.0.0
+
+# new feature
+2.0.0: _增加父级分类_
+
 #feature
 
 _自定义图片与标语_
