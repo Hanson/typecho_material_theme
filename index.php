@@ -5,7 +5,7 @@
  *
  * @package Material Theme
  * @author HanSon
- * @version 1.0.0
+ * @version 2.0.0
  * @link http://hanc.cc
  */
 

@@ -41,7 +41,30 @@
 
 				    	<?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
 				      	<?php while($category->next()): ?>
-							<li<?php if ($this->is('category', $category->slug)): ?> class="active"<?php endif; ?>><a href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>"><?php $category->name(); ?></a></li>
+				      		<?php if(count($category->children)):?>
+								<li class="dropdown">
+						          	<a href="<?php $category->permalink(); ?>" data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+						          	<?php echo $category->name?>
+						            <b class="caret"></b></a>
+						          	<ul class="dropdown-menu">
+						          		<li><a href="<?php echo $category->permalink(); ?>"><?php echo $category->name ?></a></li>
+						          		<?php foreach($category->children as $k=>$v):?>
+							            	<li><a href="<?php echo $v['permalink'] ?>"><?php echo $v['name'] ?></a></li>
+						          		<?php endforeach; ?>
+							        </ul>
+						        </li>
+				      		<?php else:?>
+				      			<?php if($category->levels == 0):?>
+					      			<li 
+										<?php if ($this->is('category', $category->slug)): ?>
+											class="active" 
+										<?php endif; ?> style="<?php print_r($category->children) ?> ">
+										<a href="<?php $category->permalink(); ?>" title="<?php $category->name(); ?>">
+											<?php $category->name(); ?>
+										</a>
+									</li>
+					      		<?php endif;?>
+				      		<?php endif;?>
 				      	<?php endwhile; ?>
 
 				        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
