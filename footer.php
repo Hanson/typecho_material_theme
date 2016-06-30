@@ -8,7 +8,7 @@
 	<footer>
 		<div class="footer-bottom">
 			<div class="container">
-				<div class="pull-left copyright">Copyright &copy; <? php _e(date('Y'));?>&nbsp;<?php $this->options->title(); ?></div>
+				<div class="pull-left copyright">Copyright &copy; <?php _e(date('Y'));?>&nbsp;<?php $this->options->title(); ?></div>
 				<ul class="footer-nav pull-right">
 					<li>Powered by <a href="http://typecho.org/" rel="nofollow">Typecho)))</a></li>
 					<li>Optimized by <a href="http://hanc.cc">HanSon</a></li>
