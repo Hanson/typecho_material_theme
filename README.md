@@ -1,14 +1,16 @@
 # typecho-material-theme
 material style theme for the typecho
 
-# version
+## install
 
-2.0.0
+```
+cd typecho/usr/theme
+git clone https://github.com/HanSon/typecho_material_theme.git
+```
 
-# new feature
-2.0.0: _增加父级分类_
+## feature
 
-#feature
+_增加父级分类_
 
 _自定义图片与标语_
 
