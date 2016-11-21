@@ -57,6 +57,17 @@
 	        ->parse('<a href="{permalink}" class="item">{date}</a>'); ?>
 	    </div>
 	</div>
+
+	<?php if(class_exists('Links_Plugin')):?>
+	<div class="panel panel-info">
+		<a class="panel-heading" onclick="$('.friend_link').slideToggle()" href="javascript:;">
+			<h3 class="panel-title">友情链接</h3>
+		</a>
+		<div class="friend_link">
+			<?php Links_Plugin::output(); ?>
+		</div>
+	</div>
+	<?php endif; ?>
  
 	<div class="panel panel-info">
 	    <a class="panel-heading" onclick="$('.other_box').slideToggle()" href="javascript:;">
