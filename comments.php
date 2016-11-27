@@ -12,7 +12,7 @@
 <div id="<?php $this->respondId(); ?>" class="respond">
 <div class="respond panel panel-default">
 	<div class="panel-body">
-		<div class="cancel-comment-reply"></div>
+		<div class="cancel-comment-reply"><?php $comments->cancelReply(); ?></div>
 		<h3 id="response">添加新评论</h3>
 		<!-- 输入表单开始 -->
 		    <form method="post" action="<?php $this->commentUrl() ?>" id="comment_form" class="form-horizontal">
