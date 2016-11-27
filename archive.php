@@ -1,4 +1,7 @@
-<?php $this->need('header.php'); ?>
+<?php
+require_once $this->getThemeDir() . 'functions.php';
+$this->need('header.php');
+?>
 
 <div class="container" id="main">
     <div class="row">
