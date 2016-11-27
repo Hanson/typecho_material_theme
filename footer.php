@@ -13,7 +13,7 @@
 					<?php endif; ?>
 
 					<?php if ( !empty($this->options->misc) && in_array('ShowLoadTime', $this->options->misc) ) : ?>
-					<li>加载耗时：<?php echo timer_stop(), ' s'; ?></li>
+					<li>加载耗时：<?php echo timer_stop(); ?></li>
 					<?php endif; ?>
 				</ul>
 			</div>
