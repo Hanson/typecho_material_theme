@@ -1,3 +1,4 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <div class="col-md-3">
 	<form method="post" action="" class="panel-body">
 		<div class="input-group">

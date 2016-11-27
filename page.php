@@ -1,9 +1,10 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php
 
     if (isset($_GET["action"]) && $_GET["action"] == "ajax_comments") {
         $this->need('comments.php');
     } else {
-        if(strpos($_SERVER["PHP_SELF"],"themes")) header('Location:/');
+        if(strpos($_SERVER["PHP_SELF"],"themes")) header('Location: /');
         $this->need('header.php');
 ?>
 

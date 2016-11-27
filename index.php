@@ -9,6 +9,7 @@
  * @link http://hanc.cc
  */
 
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
 ?>
   <section class="billboard">
