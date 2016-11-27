@@ -1,8 +1,3 @@
-
-	<!--
-	<script src="//cdn.bootcss.com/bootstrap-material-design/0.3.0/js/material.min.js"></script>
-	<script src="//cdn.bootcss.com/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
-	-->
 	</div>
 	</div>
 	<footer>
@@ -26,12 +21,11 @@
 	</footer>
 
 	<?php $this->footer(); ?>
+
 	<script src="<?php $this->options->themeUrl('js/jquery-2.1.4.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>"></script>
-	<script>
-      $.material.init();
-    </script>
-	</body>
+	<script>$.material.init();</script>
+</body>
 </html>
