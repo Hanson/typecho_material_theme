@@ -1,8 +1,4 @@
-
-	<!--
-	<script src="//cdn.bootcss.com/bootstrap-material-design/0.3.0/js/material.min.js"></script>
-	<script src="//cdn.bootcss.com/bootstrap-material-design/0.3.0/js/ripples.min.js"></script>
-	-->
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 	</div>
 	</div>
 	<footer>
@@ -18,7 +14,7 @@
 					<?php endif; ?>
 
 					<?php if ( !empty($this->options->misc) && in_array('ShowLoadTime', $this->options->misc) ) : ?>
-					<li>加载耗时：<?php echo timer_stop(), ' s'; ?></li>
+					<li>加载耗时：<?php echo timer_stop(); ?></li>
 					<?php endif; ?>
 				</ul>
 			</div>
@@ -26,12 +22,11 @@
 	</footer>
 
 	<?php $this->footer(); ?>
+
 	<script src="<?php $this->options->themeUrl('js/jquery-2.1.4.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>"></script>
-	<script>
-      $.material.init();
-    </script>
-	</body>
+	<script>$.material.init();</script>
+</body>
 </html>

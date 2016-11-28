@@ -1,4 +1,8 @@
-<?php $this->need('header.php'); ?>
+<?php
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+require_once $this->getThemeDir() . 'functions.php';
+$this->need('header.php');
+?>
 
 <div class="container" id="main">
     <div class="row">

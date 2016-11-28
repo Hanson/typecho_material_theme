@@ -1,3 +1,4 @@
+<?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->comments()->to($comments); ?>
 <div class="row">
     <div id="comments">

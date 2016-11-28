@@ -1,5 +1,5 @@
 <?php
-
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 function themeConfig($form) {
     $slogan = new Typecho_Widget_Helper_Form_Element_Text('slogan', NULL, NULL, _t('首页图片标语文字'), _t('在这里文字，用于在首页中图片的文字显示'));
     $form->addInput($slogan);
@@ -30,8 +30,8 @@ function timer_stop( $display = 0, $precision = 3 ) {
     global $timestart, $timeend;
     $mtime = explode( ' ', microtime() );
     $timeend = $mtime[1] + $mtime[0];
-    $timetotal = $timeend - $timestart;
-    $r = number_format( $timetotal, $precision );
+    $timetotal = number_format( $timeend - $timestart, $precision );
+    $r = $timetotal < 1 ? $timetotal * 1000 . " ms" : $timetotal . " s";
     if ( $display )
     echo $r;
     return $r;
