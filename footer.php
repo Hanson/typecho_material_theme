@@ -27,6 +27,13 @@
 	<script src="<?php $this->options->themeUrl('js/bootstrap.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/material.min.js'); ?>"></script>
 	<script src="<?php $this->options->themeUrl('js/ripples.min.js'); ?>"></script>
-	<script>$.material.init();</script>
+	<script>
+	$.material.init();
+	$.scrollUp({
+	scrollImg: true,
+	scrollText: "回顶部"
+	});
+	$('#scrollUp').addClass('btn btn-info btn-fab btn-raised mdi-navigation-expand-less');
+	</script>	
 </body>
 </html>
