@@ -22,7 +22,7 @@
 		        <!-- 如果当前用户已经登录 -->
 		        <?php if($this->user->hasLogin()): ?>
 		            <!-- 显示当前登录用户的用户名以及登出连接 -->
-		            <p>已作为管理员<a href="<?php $this->options->adminUrl(); ?>"><?php $this->user->screenName(); ?></a>登陆
+		            <p>已作为管理员<a href="<?php $this->options->adminUrl(); ?>"><?php $this->user->screenName(); ?></a>登录
 		            <a href="<?php $this->options->logoutUrl(); ?>" title="Logout">点击注销 &raquo;</a></p>
 
 		        <!-- 若当前用户未登录 -->
