@@ -8,20 +8,22 @@
 <div class="alert alert-info">
     <span id="commentCount"><?php $this->commentsNum(_t('还不快抢沙发'), _t('只有地板了'), _t('已有 %d 条评论')); ?></span>
 </div>
-<?php $comments->listComments(); ?>
+<?php $comments->listComments(array(
+            'replyWord'=>'<button type="button" class="btn btn-danger btn-xs mdi-content-reply reply-button"></button>',
+           )); ?>
 <?php $comments->pageNav('&laquo; 前一页', '后一页 &raquo;'); ?>
 <div id="<?php $this->respondId(); ?>" class="respond">
 <div class="respond panel panel-default">
 	<div class="panel-body">
-		<div class="cancel-comment-reply"></div>
+		<div class="cancel-comment-reply"><?php $comments->cancelReply('<button type="button" class="btn btn-primary btn-xs btn-fab mdi-content-clear pull-right"><div class="ripple-wrapper"></div></button>'); ?></div>
 		<h3 id="response">添加新评论</h3>
 		<!-- 输入表单开始 -->
 		    <form method="post" action="<?php $this->commentUrl() ?>" id="comment_form" class="form-horizontal">
 		        <!-- 如果当前用户已经登录 -->
 		        <?php if($this->user->hasLogin()): ?>
 		            <!-- 显示当前登录用户的用户名以及登出连接 -->
-		            <p>Logged in as <a href="<?php $this->options->adminUrl(); ?>"><?php $this->user->screenName(); ?></a>.
-		            <a href="<?php $this->options->logoutUrl(); ?>" title="Logout">Logout &raquo;</a></p>
+		            <p>已作为管理员 <a href="<?php $this->options->adminUrl(); ?>"><?php $this->user->screenName(); ?></a> 登录
+		            <a href="<?php $this->options->logoutUrl(); ?>" title="Logout">点击注销 &raquo;</a></p>
 
 		        <!-- 若当前用户未登录 -->
 		        <?php else: ?>
