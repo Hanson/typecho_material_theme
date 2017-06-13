@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
+  <link href="https://dn-phphub.qbox.me/uploads/avatars/4486_1463849877.jpeg?imageView2/1/w/100/h/100" rel="shortcut icon">
   <meta charset="<?php $this->options->charset(); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
   <meta name="renderer" content="webkit">
